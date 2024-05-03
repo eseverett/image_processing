@@ -15,6 +15,7 @@ int main() {
     process_paths.read_data_file_paths();
     process_paths.show_data_file_paths();
     process_paths.create_image_directories();
+    process_paths.rename_files();   
 
     return 0;
 }

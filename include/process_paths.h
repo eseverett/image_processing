@@ -1,5 +1,5 @@
-#ifndef PROCESS_NAMES_H
-#define PROCESS_NAMES_H
+#ifndef PROCESS_PATHS_H
+#define PROCESS_PATHS_H
 
 #include <string>
 
@@ -22,4 +22,4 @@ class ProcessPaths {
     string water_background_file_path;
 };
 
-#endif // PROCESS_NAMES_H
+#endif // PROCESS_PATHS

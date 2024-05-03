@@ -82,7 +82,6 @@ void ProcessPaths::create_image_directories() {
         }
     }
 }
-// img_6keV_clen01_00022.h5
 
 void ProcessPaths::rename_files() {
     cout << "Getting files from : " << preprocessed_peaks_file_path << endl;

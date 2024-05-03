@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include_directories(include)
 
 # Add the executable
-add_executable(run_process src/main.cpp src/process_paths.cpp)  # Specify the correct path to main.cpp
+add_executable(run_process src/main.cpp src/process_paths.cpp src/image_attributes.cpp)  # Specify the correct path to main.cpp
 
 # Find Boost
 find_package(Boost REQUIRED)

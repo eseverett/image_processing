@@ -327,6 +327,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="C:\Users\ejsev\Desktop\image_processing\src\main.cpp" />
     <ClCompile Include="C:\Users\ejsev\Desktop\image_processing\src\process_paths.cpp" />
+    <ClCompile Include="C:\Users\ejsev\Desktop\image_processing\src\image_attributes.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\ejsev\Desktop\image_processing\build\ZERO_CHECK.vcxproj">

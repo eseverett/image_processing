@@ -4,6 +4,9 @@
     <ClCompile Include="C:\Users\ejsev\Desktop\image_processing\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\ejsev\Desktop\image_processing\src\process_paths.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\ejsev\Desktop\image_processing\CMakeLists.txt" />

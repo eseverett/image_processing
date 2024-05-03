@@ -1,0 +1,3 @@
+C:/Users/ejsev/Desktop/image_processing/build/CMakeFiles/run_process.dir
+C:/Users/ejsev/Desktop/image_processing/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/ejsev/Desktop/image_processing/build/CMakeFiles/ZERO_CHECK.dir

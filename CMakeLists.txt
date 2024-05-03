@@ -1,28 +1,30 @@
-cmake_minimum_required(VERSION 3.10)  # Adjust this line according to your CMake version
-project(run_process)  # Name your project
+cmake_minimum_required(VERSION 3.10) 
+project(run_process LANGUAGES CXX) 
 
 # Set the C++ standard to C++20
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Specify the directories where to search for headers
-include_directories(include)
-
 # Add the executable
-add_executable(run_process src/main.cpp src/process_paths.cpp src/image_attributes.cpp)  # Specify the correct path to main.cpp
+add_executable(run_process src/main.cpp src/process_paths.cpp src/image_attributes.cpp)  
 
-# Find Boost
+# Include the header files
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+set(CMAKE_TOOLCHAIN_FILE C:/Users/ejsev/Documents/vcpkg/scripts/buildsystems/vcpkg.cmake)
+
+# Find and link Boost
 find_package(Boost REQUIRED)
 if(Boost_FOUND)
-    include_directories(${Boost_INCLUDE_DIRS})
-    target_link_libraries(run_process ${Boost_LIBRARIES})
+    target_include_directories(run_process PRIVATE ${Boost_INCLUDE_DIRS})
+    target_link_libraries(run_process PRIVATE ${Boost_LIBRARIES})
 endif()
 
-# Find HDF5
+# Find and link HDF5
 find_package(HDF5 REQUIRED COMPONENTS C HL)
 if(HDF5_FOUND)
-    include_directories(${HDF5_INCLUDE_DIRS})
-    target_link_libraries(run_process ${HDF5_LIBRARIES} ${HDF5_HL_LIBRARIES})
+    target_include_directories(run_process PRIVATE ${HDF5_INCLUDE_DIRS})
+    target_link_libraries(run_process PRIVATE ${HDF5_LIBRARIES} ${HDF5_HL_LIBRARIES})
 endif()
 
 # Compiler-specific options
@@ -31,3 +33,6 @@ if(MSVC)
 else()
     target_compile_options(run_process PRIVATE -Wall -Wextra -pedantic)
 endif()
+
+
+

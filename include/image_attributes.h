@@ -2,6 +2,7 @@
 #define IMAGE_ATTRIBUTES_H
 
 #include <string>
+#include <map>
 
 using namespace std;
 
@@ -12,6 +13,7 @@ enum ImageType {
     labels
 };
 
+
 class ImageAttributes {
 
     public:
@@ -19,7 +21,16 @@ class ImageAttributes {
     ImageAttributes();
 
     void write_attributes(ImageType image_type);
+    string camera_length_key(string clen_val);
     void read_attributes();
+
+    private:
+
+    string peaks_file_path;
+    string water_file_path;
+    string overlay_file_path;
+    string sub_files[9];
+    map<string, string> camera_length_map;
 };
 
 

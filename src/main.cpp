@@ -19,6 +19,7 @@ int main() {
     process_paths.rename_files();   
 
     ImageAttributes image_attributes;
+    image_attributes.write_attributes(peaks);
 
     return 0;
 }

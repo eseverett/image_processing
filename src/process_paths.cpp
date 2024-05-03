@@ -74,3 +74,8 @@ void ProcessPaths::create_image_directories() {
         }
     }
 }
+
+
+void ProcessPaths::rename_files() {
+    return;
+}

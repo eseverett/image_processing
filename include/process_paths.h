@@ -13,6 +13,7 @@ class ProcessPaths {
     void read_data_file_paths();
     void show_data_file_paths();
     void create_image_directories();
+    void rename_files();
 
     private:
 

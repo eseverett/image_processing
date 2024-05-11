@@ -3,6 +3,7 @@
 
 #include <string>
 #include <map>
+#include <array>
 
 using namespace std;
 
@@ -23,6 +24,7 @@ class ImageAttributes {
     void write_attributes(ImageType image_type);
     string camera_length_key(string clen_val);
     void read_attributes();
+    int* open_h5(string file_path);
 
     private:
 

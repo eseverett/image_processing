@@ -73,7 +73,7 @@ void ImageAttributes::write_attributes(ImageType image_type) {
                 cout << "No match found" << endl;
             }
 
-            H5File file(current_file, H5F_ACC_RDWR);
+            open_h5(current_file);
 
         }   
     }
@@ -90,6 +90,13 @@ string ImageAttributes::camera_length_key(string clen_val) {
     }
     return clen_val;
 }
+
+int* ImageAttributes::open_h5(string file_path) { 
+    H5File file(file_path, H5F_ACC_RDWR);
+    return; 
+}
+
+
 
 void ImageAttributes::read_attributes() {
     cout << "Reading image attributes" << endl;
